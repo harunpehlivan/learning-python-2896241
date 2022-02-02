@@ -35,10 +35,9 @@ def printResults(data):
     print("\n\nEvents that were felt:")
     for i in theJSON["features"]:
         feltReports = i["properties"]["felt"]
-        if (feltReports != None):
-            if (feltReports > 0):
-                print("%2.1f" % i["properties"]["mag"], i["properties"]
-                      ["place"], " reported " + str(feltReports) + " times")
+        if (feltReports != None) and (feltReports > 0):
+            print("%2.1f" % i["properties"]["mag"], i["properties"]
+                  ["place"], " reported " + str(feltReports) + " times")
 
 
 def main():
