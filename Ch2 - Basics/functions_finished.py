@@ -19,16 +19,13 @@ def cube(x):
 # function with default value for an argument
 def power(num, x=1):
     result = 1
-    for i in range(x):
-        result = result * num
+    for _ in range(x):
+        result *= num
     return result
 
 # function with variable number of arguments
 def multi_add(*args):
-    result = 0
-    for x in args:
-        result = result + x
-    return result
+    return sum(args)
 
 
 func1()

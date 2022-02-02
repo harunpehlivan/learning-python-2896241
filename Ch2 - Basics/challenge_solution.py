@@ -4,9 +4,7 @@
 
 def is_palindrome(teststr):
     # use the slice trick to reverse the string
-    if teststr == teststr[::-1]:
-        return True
-    return False
+    return teststr == teststr[::-1]
 
 run = True
 while (run):
@@ -21,9 +19,5 @@ while (run):
     teststr = teststr.lower()
 
     # strip all the spaces and punctuation from the string
-    newstr = ""
-    for x in teststr:
-        if x.isalnum():
-            newstr += x
-
+    newstr = "".join(x for x in teststr if x.isalnum())
     print("Palindrome test:", is_palindrome(newstr))
